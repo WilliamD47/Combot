@@ -83,7 +83,7 @@ class YouTubeCog(commands.Cog):
     @commands.command(pass_context=True, aliases=["ytsearch", "yts"])
     async def youtubesearch(self, ctx, *, searchterm):
         try:
-            apikey = "AIzaSyCAw42qsmEjxqD-2leOFQQmThbHrMH48Hk"
+            apikey = key
             results = YoutubeSearch(searchterm, max_results=10).to_json()
             thingy = json.loads(results)["videos"][0]["id"]
             thumbnail = json.loads(results)["videos"][0]["thumbnails"][0]
@@ -137,7 +137,7 @@ class YouTubeCog(commands.Cog):
     @commands.is_nsfw()
     @commands.command(pass_context=True, aliases=["ls", "longsearch", "ms", "multis"])
     async def multisearch(self, ctx, *, searchterm):
-        apikey = "AIzaSyCAw42qsmEjxqD-2leOFQQmThbHrMH48Hk"
+        apikey = key
         results = YoutubeSearch(searchterm, max_results=10).to_json()
         thumbnail = json.loads(results)["videos"][0]["thumbnails"][0]
         embed = discord.Embed(title="Search Results", color=0xff0000)
