@@ -1,8 +1,8 @@
-Combot by WilliamD47
+Oqaroid by WilliamD47
 ====================
 
 
-Thanks for using Combot!
+Thanks for using Oqaroid!
 
 The commands are below
 
